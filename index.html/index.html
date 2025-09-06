@@ -27,6 +27,51 @@
             <h2>Willkommen auf unserer Plattform</h2>
             <p>Hier finden Sie Informationen über die CO₂-Emissionen verschiedener Länder und Unternehmen weltweit.</p>
         </section>
+        <!-- Tabelle mit Filterfunktion -->
+<section id="emissions-table">
+  <h2>CO₂-Emissionen nach Land und Unternehmen</h2>
+
+  <!-- Suchfeld -->
+  <input type="text" id="searchInput" placeholder="Suchen nach Land oder Unternehmen..." />
+
+  <!-- Tabelle -->
+  <table id="co2Table">
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Land</th>
+        <th onclick="sortTable(1)">Unternehmen</th>
+        <th onclick="sortTable(2)">Emissionen (Mt CO₂)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Deutschland</td>
+        <td>AutoCorp AG</td>
+        <td>132.5</td>
+      </tr>
+      <tr>
+        <td>USA</td>
+        <td>TechIndustries Inc</td>
+        <td>289.1</td>
+      </tr>
+      <tr>
+        <td>China</td>
+        <td>CoalPower Ltd</td>
+        <td>401.7</td>
+      </tr>
+      <tr>
+        <td>Schweden</td>
+        <td>GreenFuture AB</td>
+        <td>74.2</td>
+      </tr>
+      <tr>
+        <td>Brasilien</td>
+        <td>AgroNova</td>
+        <td>112.3</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
     </main>
 
     <!-- Fußzeile mit rechtlichen Hinweisen -->
