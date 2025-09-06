@@ -57,3 +57,57 @@ footer {
         padding: 1rem;
     }
 }
+/* Tabellen-Layout*/
+
+/* Tabellenbereich */
+#emissions-table {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#co2Table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#co2Table th,
+#co2Table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Hover-Highlight */
+#co2Table tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* Suchfeld */
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #co2Table th,
+  #co2Table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #searchInput {
+    width: 90%;
+  }
+}
