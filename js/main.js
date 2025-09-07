@@ -10,8 +10,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 // --- Filterfunktion ---
+// Hilfsfunktion: Eingaben absichern 
+function sanitizeInput(str) {
+  if (!str) return "";
+  return str
+    .replace(/<\/?script[^>]*>/gi, "")   // <script>-Tags entfernen
+    .replace(/[<>]/g, "")                // spitze Klammern entfernen
+    .replace(/["'`]/g, "")               // Anführungszeichen raus
+    .replace(/javascript:[^ ]*/gi, "")   // "javascript:"-URLs entfernen
+    .replace(/\s+/g, " ")                // Leerzeichen normalisieren
+    .trim()
+    .slice(0, 120);                      // Länge begrenzen
+}
+//  Filterfunktion für Tabelle
 document.getElementById("searchInput").addEventListener("keyup", function () {
-  const filter = this.value.toLowerCase();
+  const raw = this.value;
+  const filter = sanitizeInput(raw).toLowerCase();
+
+  // Optional: Eingabe sofort bereinigen (sichtbar im Feld)
+  if (raw !== filter) this.value = filter;
+
   const rows = document.querySelectorAll("#co2Table tbody tr");
 
   rows.forEach(row => {
@@ -21,6 +39,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
 });
 
 // --- Sortierfunktion ---
+//  Sortierfunktion für Tabelle 
 function sortTable(colIndex) {
   const table = document.getElementById("co2Table");
   const tbody = table.tBodies[0];
