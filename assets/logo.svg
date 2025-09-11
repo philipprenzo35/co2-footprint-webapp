@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 100 100">
+  <!-- Grüner Kreis -->
+  <circle cx="50" cy="50" r="45" fill="#2e7d32" />
+
+  <!-- Blatt -->
+  <path d="M50 25 C30 35, 30 65, 50 75 C70 65, 70 35, 50 25 Z" fill="#a5d6a7" />
+
+  <!-- Text CO₂ -->
+  <text x="50%" y="55%" text-anchor="middle" font-size="26" fill="white" font-family="Arial, sans-serif">
+    CO₂
+  </text>
+</svg>
