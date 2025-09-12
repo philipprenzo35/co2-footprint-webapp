@@ -111,3 +111,44 @@ footer {
     width: 90%;
   }
 }
+/* Tablet (bis 1024px) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 1rem;               /* weniger Abstand */
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #co2Table th,
+  #co2Table td {
+    font-size: 0.95rem;
+  }
+}
+
+/* Smartphone (bis 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;  
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #co2Table {
+    display: block;
+    overflow-x: auto;       /* Tabelle scrollbar machen */
+    white-space: nowrap;    /* Zeilen umbrechen verhindern */
+  }
+
+  #co2Table th,
+  #co2Table td {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
