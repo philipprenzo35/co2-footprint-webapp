@@ -206,3 +206,53 @@ html[dir="rtl"] nav ul {
 .rtl-btn:hover {
   background-color: #34495e;
 }
+/* Lokales Menü */
+#local-menu {
+  width: 200px;
+  padding: 1rem;
+  background: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+  font-family: inherit;
+  position: sticky;
+  top: 80px; 
+  z-index: 100;
+}
+
+#local-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#local-menu li {
+  margin-bottom: 0.75rem;
+}
+
+#local-menu a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#local-menu a:hover {
+  background: #f4f4f4;
+  color: #0077cc; 
+}
+
+/* Standard: LTR → Menü links */
+[dir="ltr"] #local-menu {
+  float: left;
+  margin-right: 2rem;
+}
+
+/* RTL → Menü rechts */
+[dir="rtl"] #local-menu {
+  float: right;
+  margin-left: 2rem;
+}
