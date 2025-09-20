@@ -70,3 +70,9 @@ function sortTable(colIndex) {
   // Sortierte Zeilen zurück ins tbody einfügen
   rows.forEach(row => tbody.appendChild(row));
 }
+    // Funktion zum Umschalten der Schreibrichtung (LTR/RTL)
+function toggleDirection() {
+  const html = document.documentElement;
+  const currentDir = html.getAttribute("dir") || "ltr";
+  html.setAttribute("dir", currentDir === "ltr" ? "rtl" : "ltr");
+}
